@@ -1,0 +1,19 @@
+protocolo,nome_aluno,email,categoria,data_atendimento,tempo_atendimento_min,status,descricao
+PROT-2023-001, João Silva ,joao.silva@email.com,Acesso ao AVA,2023-10-01,15,Concluído,Dificuldade de acesso ao portal do aluno.
+PROT-2023-002,Maria Santos,maria.santos@email.com,acesso_ava,02/10/2023,25.5,concluido,Senha expirada no ambiente virtual.
+PROT-2023-003,Carlos Oliveira,carlos.oliveira_errado.com,Instalação de Programas,2023-10-03,40,Em Andamento,Ajuda com instalacao do VS Code.
+PROT-2023-004,Ana Souza,ana.souza@email.com,CONFIGURAÇÃO DO PYTHON,04-10-2023,-10,Pendente,Erro de PATH no Windows.
+PROT-2023-005,Lucas Mendes,lucas.mendes@email.com,Problemas com Senhas,2023/10/05,10,CONCLUIDO,Redefinição de senha solicitada.
+PROT-2023-001,João Silva,joao.silva@email.com,Acesso ao AVA,2023-10-01,15,Concluído,Dificuldade de acesso ao portal do aluno (duplicado).
+PROT-2023-006,Beatriz Lima,beatriz.lima@email.com,Dificuldades na Execução das Atividades,2023-10-06,abc,Em Andamento,Dúvida no Desafio 01 do módulo Python.
+PROT-2023-007,Fernando Rocha,fernando.rocha@email..com,senha,07/10/2023,12,Concluído,Não consegue logar.
+PROT-2023-008,Camila Alves,camila.alves@email.com,instalacao_programas,2023-10-08,60,pendente,Problema com permissão de administrador no PC.
+,Gabriel Costa,gabriel.costa@email.com,Acesso ao AVA,2023-10-09,20,Concluído,Sem protocolo gerado.
+PROT-2023-009,Juliana Barbosa,,Configuração do Python,10/10/2023,35,Concluído,Instalação do ambiente virtual .venv.
+PROT-2023-010,Rafael Martins,rafael.martins@email.com,ACESSO AVA,2023-13-45,18,Concluído,Link de acesso quebrado.
+PROT-2023-011,Patricia Ferreira,patricia.ferreira@email.com,Dificuldades nas Atividades,2023-10-11,45,Concluído,Suporte com biblioteca Pandas.
+PROT-2023-012, Rodrigo Ribeiro ,rodrigo.ribeiro@email.com,Instalação de Programas,12-10-2023,0,Cancelado,Atendimento cancelado pelo aluno.
+PROT-2023-013,Fernanda Gomes,fernanda.gomes@email.com,Configuração do Python,2023-10-13,30,Concluído,Configuração do Git e GitHub no VS Code.
+PROT-2023-014,Eduardo Dias,eduardo.dias@email.com,Problemas com Senhas,14/10/2023,15,concluido,Troca de senha efetuada com sucesso.
+PROT-2023-005,Lucas Mendes,lucas.mendes@email.com,Problemas com Senhas,2023/10/05,10,CONCLUIDO,Redefinição de senha solicitada (duplicado).
+PROT-2023-015,Vanessa Cardoso,vanessa.cardoso@email.com,Acesso ao AVA,2023-10-15,22,Em Andamento,Erro ao tentar enviar arquivo de atividade.
