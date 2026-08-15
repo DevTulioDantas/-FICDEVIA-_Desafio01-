@@ -3,7 +3,7 @@ import logging
 import json
 import pandas as pd
 
-#Caminhos diretorios e arquivos
+#Caminhos de diretorios e arquivos
 RAIZ = Path(__file__).resolve().parent.parent
 DATA = RAIZ/'data'
 OUTPUT = RAIZ/'output'
@@ -85,4 +85,23 @@ def carregar_excel(caminho_arquivo: Path) -> pd.DataFrame | None:
         return None
     except Exception as e:
         logging.error(f"Erro inesperado ao ler Excel '{caminho_arquivo.name}': {e}")
+        return None
+
+#Valida e Lê um TXT
+def carregar_txt(caminho_arquivo: Path) -> list[str] | None:
+    """Lê um arquivo de texto (.txt) e retorna uma lista com suas linhas."""
+    try:
+        with open(caminho_arquivo, "r", encoding="utf-8") as f:
+            linhas = f.readlines()
+            logging.info(f"TXT '{caminho_arquivo.name}' carregado com sucesso! ({len(linhas)} linhas)")
+            return linhas
+
+    except FileNotFoundError:
+        logging.error(f"Arquivo TXT não encontrado: {caminho_arquivo.name}")
+        return None
+    except UnicodeDecodeError:
+        logging.error(f"Erro de codificação ao ler o TXT '{caminho_arquivo.name}'. Verifique o encoding.")
+        return None
+    except Exception as e:
+        logging.error(f"Erro inesperado ao ler TXT '{caminho_arquivo.name}': {e}")
         return None
