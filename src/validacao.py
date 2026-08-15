@@ -49,7 +49,26 @@ def padronizar_data(data_bruta:str) -> str:
 
     return None
 
-      
+def padronizar_telefone(telefone_bruto: str) -> str:
+    """Verifica o formato do telefone
+
+    Args:
+        telefone_bruto (str): Telefone a ser validado
+
+    Returns:
+        str: True se for um numero de telefone válido, falso se for vazio ou fora do padrão esperado
+    """
+    padrao_telefone = re.compile(
+    r"\(?\d{2}\)?[\s.-]?9?[\s.-]?\d{4}[\s.-]?\d{4}"
+    )
+    if not telefone_bruto:
+        return False
+
+    return bool(padrao_telefone.fullmatch(telefone_bruto.strip()))
+
+
+
+    
 
 
 
