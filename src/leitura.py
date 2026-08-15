@@ -1,8 +1,9 @@
 from pathlib import Path
 import logging
 import json
-#import pandas as pd
+import pandas as pd
 
+#Caminhos diretorios e arquivos
 RAIZ = Path(__file__).resolve().parent.parent
 DATA = RAIZ/'data'
 OUTPUT = RAIZ/'output'
@@ -20,6 +21,7 @@ logging.basicConfig(
     ]
 )
 
+#Valida diretórios
 def verificar_e_criar_diretorios() -> None:
     """Garante que as pastas data, output e output/graficos existam no projeto."""
 
@@ -29,7 +31,7 @@ def verificar_e_criar_diretorios() -> None:
         for diretorio in diretorios:
             diretorio.mkdir(parents=True, exist_ok=True)
 
-        logging.info('diretorios verificados')   
+        logging.info('Diretórios verificados')   
 
     except PermissionError:
         logging.error("Sem autorização do sistema para criar as pastas.")      
@@ -37,5 +39,50 @@ def verificar_e_criar_diretorios() -> None:
     except Exception as e:
         logging.error(f"Erro inesperado ao criar diretórios: {e}")
 
+# Valida e Lê um JSON
+def carregar_json(caminho_arquivo: Path) -> dict | None:
+    """Lê e carrega um arquivo JSON. Trata arquivos ausentes ou corrompidos."""
+    try:
+        with open(caminho_arquivo, "r", encoding="utf-8") as f:
+            dados = json.load(f)
+            logging.info(f"JSON '{caminho_arquivo.name}' carregado com sucesso!")
+            return dados
+    except FileNotFoundError:
+        logging.error(f"Arquivo JSON não encontrado: {caminho_arquivo.name}")
+        return None
+    except json.JSONDecodeError:
+        logging.error(f"O arquivo JSON '{caminho_arquivo.name}' está corrompido/inválido.")
+        return None
+    except Exception as e:
+        logging.error(f"Erro inesperado ao ler JSON '{caminho_arquivo.name}': {e}")
+        return None
 
 
+# Valida e Lê um CSV
+def carregar_csv(caminho_arquivo: Path, separador: str = ";") -> pd.DataFrame | None:
+    """Lê um arquivo CSV para um DataFrame do Pandas."""
+    try:
+        df = pd.read_csv(caminho_arquivo, sep=separador, encoding="utf-8")
+        logging.info(f"CSV '{caminho_arquivo.name}' carregado com sucesso! ({len(df)} linhas)")
+        return df
+    except FileNotFoundError:
+        logging.error(f"Arquivo CSV não encontrado: {caminho_arquivo.name}")
+        return None
+    except Exception as e:
+        logging.error(f"Erro inesperado ao ler CSV '{caminho_arquivo.name}': {e}")
+        return None
+
+
+# Valida e Lê um Excel
+def carregar_excel(caminho_arquivo: Path) -> pd.DataFrame | None:
+    """Lê um arquivo Excel (.xlsx) para um DataFrame do Pandas."""
+    try:
+        df = pd.read_excel(caminho_arquivo)
+        logging.info(f"Excel '{caminho_arquivo.name}' carregado com sucesso! ({len(df)} linhas)")
+        return df
+    except FileNotFoundError:
+        logging.error(f"Arquivo Excel não encontrado: {caminho_arquivo.name}")
+        return None
+    except Exception as e:
+        logging.error(f"Erro inesperado ao ler Excel '{caminho_arquivo.name}': {e}")
+        return None
