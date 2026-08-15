@@ -23,7 +23,13 @@ logging.basicConfig(
 
 #Valida diretórios
 def verificar_e_criar_diretorios() -> None:
-    """Garante que as pastas data, output e output/graficos existam no projeto."""
+    """
+    Garante que as pastas data, output e output/graficos existam no projeto.
+
+    Returns:
+        None    
+    
+    """
 
     diretorios = [DATA, OUTPUT, GRAFICOS]
 
@@ -41,7 +47,15 @@ def verificar_e_criar_diretorios() -> None:
 
 # Valida e Lê um JSON
 def carregar_json(caminho_arquivo: Path) -> dict | None:
-    """Lê e carrega um arquivo JSON. Trata arquivos ausentes ou corrompidos."""
+    """
+    Lê e carrega um arquivo JSON. Trata arquivos ausentes ou corrompidos.
+
+    Args:
+        caminho_arquivo (Path): O caminho completo para o arquivo JSON.
+
+    Returns:
+        dict | None: Dicionário contendo os dados do JSON ou None se falhar.
+    """
     try:
         with open(caminho_arquivo, "r", encoding="utf-8") as f:
             dados = json.load(f)
@@ -60,7 +74,17 @@ def carregar_json(caminho_arquivo: Path) -> dict | None:
 
 # Valida e Lê um CSV
 def carregar_csv(caminho_arquivo: Path, separador: str = ";") -> pd.DataFrame | None:
-    """Lê um arquivo CSV para um DataFrame do Pandas."""
+    """
+    Lê um arquivo CSV para um DataFrame do Pandas.
+    
+    Args:
+        caminho_arquivo (Path): O caminho completo para o arquivo CSV.
+        separador (str, optional): O caractere separador das colunas. Padrão é ';'.
+
+    Returns:
+        pd.DataFrame | None: DataFrame do Pandas com os dados lidos ou None se falhar.
+    
+    """
     try:
         df = pd.read_csv(caminho_arquivo, sep=separador, encoding="utf-8")
         logging.info(f"CSV '{caminho_arquivo.name}' carregado com sucesso! ({len(df)} linhas)")
@@ -75,7 +99,15 @@ def carregar_csv(caminho_arquivo: Path, separador: str = ";") -> pd.DataFrame | 
 
 # Valida e Lê um Excel
 def carregar_excel(caminho_arquivo: Path) -> pd.DataFrame | None:
-    """Lê um arquivo Excel (.xlsx) para um DataFrame do Pandas."""
+    """
+    Lê um arquivo Excel (.xlsx) para um DataFrame do Pandas.
+
+    Args:
+        caminho_arquivo (Path): O caminho completo para o arquivo .xlsx.
+
+    Returns:
+        pd.DataFrame | None: DataFrame do Pandas com a planilha ou None se falhar.
+    """
     try:
         df = pd.read_excel(caminho_arquivo)
         logging.info(f"Excel '{caminho_arquivo.name}' carregado com sucesso! ({len(df)} linhas)")
@@ -89,7 +121,16 @@ def carregar_excel(caminho_arquivo: Path) -> pd.DataFrame | None:
 
 #Valida e Lê um TXT
 def carregar_txt(caminho_arquivo: Path) -> list[str] | None:
-    """Lê um arquivo de texto (.txt) e retorna uma lista com suas linhas."""
+    """
+    Lê um arquivo de texto (.txt) e retorna uma lista com suas linhas.
+
+    Args:
+        caminho_arquivo (Path): O caminho completo para o arquivo TXT.
+
+    Returns:
+        list[str] | None: Lista com as linhas do arquivo ou None se falhar.
+    """
+
     try:
         with open(caminho_arquivo, "r", encoding="utf-8") as f:
             linhas = f.readlines()
