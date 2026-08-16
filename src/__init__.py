@@ -25,6 +25,15 @@ from .validacao import (
     validar_registro,
 )
 
+from .processamento import(
+    quantidade_total_atendimento,
+    quantidade_por_categoria,
+    quantidade_por_status,
+    tempo_medio_atendimento,
+    categoria_maior_numero_solicitacoes,
+    percentual_registros_invalidos_incompletos,
+)
+
 
 __all__ = [
     # Funções de leitura
@@ -33,6 +42,14 @@ __all__ = [
     "carregar_json",
     "carregar_txt",
     "verificar_e_criar_diretorios",
+
+    # Funções de calculo de indicadores
+    "quantidade_total_atendimento",
+    "quantidade_por_categoria",
+    "quantidade_por_status",
+    "tempo_medio_atendimento",
+    "categoria_maior_numero_solicitacoes",
+    "percentual_registros_invalidos_incompletos",
 
     # Funções de validação individuais
     "email_valido",
