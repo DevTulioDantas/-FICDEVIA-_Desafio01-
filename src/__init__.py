@@ -1,5 +1,9 @@
+"""Pacote de análise de atendimentos de suporte técnico.
 
-#leitura.py
+Expõe as funções de leitura e validação como API pública do pacote,
+permitindo importação direta via `from src import funcao_x`.
+"""
+
 from .leitura import (
     carregar_csv,
     carregar_excel,
@@ -10,12 +14,18 @@ from .leitura import (
 
 from .validacao import (
     email_valido,
-    padronizar_data,
     padronizar_telefone,
+    padronizar_data,
+    tempo_atendimento_valido,
+    categoria_valida,
+    normalizar_status,
+    construir_mapa_categorias,
+    extrair_contatos_txt,
+    nucleo_protocolo,
+    validar_registro,
 )
 
 
-# Para importar como " from src import * "
 __all__ = [
     # Funções de leitura
     "carregar_csv",
@@ -23,12 +33,22 @@ __all__ = [
     "carregar_json",
     "carregar_txt",
     "verificar_e_criar_diretorios",
-    
-    #Funções de validação
-    "email_valido",
-    "padronizar_data",
-    "padronizar_telefone",
 
+    # Funções de validação individuais
+    "email_valido",
+    "padronizar_telefone",
+    "padronizar_data",
+    "tempo_atendimento_valido",
+    "categoria_valida",
+    "normalizar_status",
+
+    # Funções auxiliares de estrutura/mapeamento
+    "construir_mapa_categorias",
+    "extrair_contatos_txt",
+    "nucleo_protocolo",
+
+    # Orquestradora
+    "validar_registro",
 ]
 
-__version__= "1.0.0"
+__version__ = "1.0.0"
