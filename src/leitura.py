@@ -87,13 +87,13 @@ def carregar_csv(caminho_arquivo: Path, separador: str = ";") -> pd.DataFrame | 
     """
     try:
         df = pd.read_csv(caminho_arquivo, sep=separador, encoding="utf-8")
-        logging.info(f"CSV '{caminho_arquivo.name}' carregado com sucesso! ({len(df)} linhas)")
+        logging.info(f"CSV '{caminho_arquivo}' carregado com sucesso! ({len(df)} linhas)")
         return df
     except FileNotFoundError:
-        logging.error(f"Arquivo CSV não encontrado: {caminho_arquivo.name}")
+        logging.error(f"Arquivo CSV não encontrado: {caminho_arquivo}")
         return None
     except Exception as e:
-        logging.error(f"Erro inesperado ao ler CSV '{caminho_arquivo.name}': {e}")
+        logging.error(f"Erro inesperado ao ler CSV '{caminho_arquivo}': {e}")
         return None
 
 
