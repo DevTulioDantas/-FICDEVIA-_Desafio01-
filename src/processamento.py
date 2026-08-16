@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+import logging
+
+logger = logging.getLogger(__name__)
 
 #Calculo de indicadores
 def quantidade_total_atendimento (df: pd.DataFrame) -> int:
@@ -99,4 +102,27 @@ def percentual_registros_invalidos_incompletos(df: pd.DataFrame) -> float:
     percentual = np.divide(linhas_incompletas, quant_linhas) * 100
 
     return float(np.round(percentual, 2))
+
+
+
+
+def remover_duplicados_por_protocolo(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove registros com protocolo duplicado
+
+    Args:
+        df (pd.DataFrame):
+
+    Returns:
+        pd.DataFrame: DataFrame com tratamento e duplicados
+    """
+    duplicados = df[df.duplicated(subset="protocolo", keep="first")]
+
+    if not duplicados.empty:
+        logger.warning(
+            f"{len(duplicados)} registro(s) duplicado(s) removido(s): "
+            f"{duplicados['protocolo'].tolist()}"
+        )
+
+    return df.drop_duplicates(subset="protocolo", keep="first").reset_index(drop=True)
+
     
