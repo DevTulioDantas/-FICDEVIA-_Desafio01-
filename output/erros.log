@@ -1,0 +1,165 @@
+2026-08-16 18:16:47,104 - [INFO] - generated new fontManager
+2026-08-16 18:16:47,739 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:16:47,750 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:16:47,751 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:16:47,752 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:16:47,757 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:16:47,758 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:16:47,758 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:16:47,759 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:20:55,047 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:20:55,049 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:20:55,050 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:20:55,050 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:20:55,055 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:20:55,055 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:20:55,056 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:20:55,056 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:20:55,057 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:20:55,058 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:23:06,539 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:23:06,543 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:23:06,543 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:23:06,544 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:23:06,552 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:23:06,552 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:23:06,553 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:23:06,553 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:23:06,554 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:23:06,555 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:23:06,557 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:23:06,557 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:24:21,826 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:24:21,828 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:24:21,829 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:24:21,829 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:24:21,835 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:24:21,836 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:24:21,836 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:24:21,836 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:24:21,837 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:24:21,838 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:24:21,838 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:24:21,839 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:24:21,839 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:24:21,839 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:26:55,643 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:26:55,645 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:26:55,645 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:26:55,646 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:26:55,650 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:26:55,651 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:26:55,652 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:26:55,652 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:26:55,653 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:26:55,653 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:26:55,654 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:26:55,654 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:26:55,654 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:26:55,655 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:26:55,658 - [INFO] - Diretórios verificados
+2026-08-16 18:29:59,026 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:29:59,031 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:29:59,031 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:29:59,032 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:29:59,037 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:29:59,038 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:29:59,038 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:29:59,039 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:29:59,039 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:29:59,040 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:29:59,040 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:29:59,041 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:29:59,041 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:29:59,042 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:29:59,046 - [INFO] - Diretórios verificados
+2026-08-16 18:31:07,567 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:31:07,569 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:31:07,569 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:31:07,570 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:31:07,574 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:31:07,575 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:31:07,575 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:31:07,576 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:31:07,576 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:31:07,576 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:31:07,577 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:31:07,577 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:31:07,578 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:31:07,579 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:31:07,581 - [INFO] - Diretórios verificados
+2026-08-16 18:31:25,804 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:31:25,807 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:31:25,807 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:31:25,808 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:31:25,815 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:31:25,816 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:31:25,816 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:31:25,817 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:31:25,817 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:31:25,818 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:31:25,818 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:31:25,819 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:31:25,819 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:31:25,820 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:31:25,823 - [INFO] - Diretórios verificados
+2026-08-16 18:32:34,143 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:32:34,146 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:32:34,146 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:32:34,147 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:32:34,152 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:32:34,153 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:32:34,154 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:32:34,154 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:32:34,155 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:32:34,156 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:32:34,158 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:32:34,159 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:32:34,159 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:32:34,160 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:32:34,164 - [INFO] - Diretórios verificados
+2026-08-16 18:33:40,101 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:33:40,104 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:33:40,105 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:33:40,105 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:33:40,110 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:33:40,110 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:33:40,111 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:33:40,111 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:33:40,112 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:33:40,112 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:33:40,113 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:33:40,113 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:33:40,114 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:33:40,114 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:33:40,117 - [INFO] - Diretórios verificados
+2026-08-16 18:34:18,983 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:34:18,987 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:34:18,988 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:34:18,989 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:34:18,997 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:34:18,997 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:34:18,998 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:34:18,999 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:34:18,999 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:34:19,000 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:34:19,001 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:34:19,001 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:34:19,001 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:34:19,002 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:34:19,006 - [INFO] - Diretórios verificados
+2026-08-16 18:35:47,231 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-16 18:35:47,234 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-16 18:35:47,234 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-16 18:35:47,235 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-16 18:35:47,240 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-16 18:35:47,240 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-16 18:35:47,241 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-16 18:35:47,241 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-16 18:35:47,242 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-16 18:35:47,242 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-16 18:35:47,242 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-16 18:35:47,243 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-16 18:35:47,243 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-16 18:35:47,244 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-16 18:35:47,247 - [INFO] - Diretórios verificados
