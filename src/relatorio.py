@@ -172,3 +172,24 @@ def exportar_graficos(df: pd.DataFrame) -> None:
 
     except Exception as e:
         logging.error(f" Erro ao gerar gráficos: {e}")
+
+def exportar_csv_tratado(
+    df: pd.DataFrame, caminho: Path = OUTPUT / "atendimentos_processados.csv"
+) -> None:
+    """Exporta o DataFrame de atendimentos
+
+    Args:
+        df (pd.DataFrame): DataFrame contendo os registros já validados,
+            padronizados e sem duplicados.
+        caminho (Path): Caminho onde o CSV será salvo padrão é
+            'output/atendimentos_processados.csv'    
+    """
+    try:
+        caminho.parent.mkdir(parents=True, exist_ok=True)
+
+        df.to_csv(caminho, index=False, sep=";", encoding="utf-8")
+
+        logging.info(f"CSV tratado salvo com sucesso em: {caminho} ({len(df)} linhas)")
+
+    except Exception as e:
+        logging.error(f"Erro ao tentar salvar o CSV tratado '{caminho}': {e}")
