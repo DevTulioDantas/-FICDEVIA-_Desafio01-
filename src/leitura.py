@@ -147,3 +147,6 @@ def carregar_txt(caminho_arquivo: Path) -> list[str] | None:
     except Exception as e:
         logging.error(f"Erro inesperado ao ler TXT '{caminho_arquivo.name}': {e}")
         return None
+
+
+

@@ -38,6 +38,7 @@ from .relatorio import (
     gerar_dicionario_indicadores,
     exportar_resumo_json,
     exportar_graficos,
+    exportar_csv_tratado, 
 )
 
 
