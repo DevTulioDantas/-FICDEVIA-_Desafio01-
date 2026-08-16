@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 #Calculo de indicadores
 def quantidade_total_atendimento (df: pd.DataFrame) -> int:
@@ -54,7 +55,8 @@ def tempo_medio_atendimento (df: pd.DataFrame) -> float:
         >>> tempo_medio_de_atendimento(df)
         13.8  # Representa 13 minutos e 48 segundos (0.8 * 60)
     """
-    return round(float(df["tempo_minutos"].mean()), 2)
+    media = np.mean(df["tempo_minutos"])
+    return float(np.round(media, 2))
 
 def categoria_maior_numero_solicitacoes(df: pd.DataFrame) -> str:
     """
@@ -94,7 +96,7 @@ def percentual_registros_invalidos_incompletos(df: pd.DataFrame) -> float:
     # Conta quantas linhas têm pelo menos 1 valor ausente (NaN)
     linhas_incompletas = df.isna().any(axis=1).sum()
 
-    percentual = (linhas_incompletas / quant_linhas) * 100
+    percentual = np.divide(linhas_incompletas, quant_linhas) * 100
 
-    return round(float(percentual), 2)
+    return float(np.round(percentual, 2))
     

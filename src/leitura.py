@@ -98,6 +98,7 @@ def carregar_csv(caminho_arquivo: Path, separador: str = ";") -> pd.DataFrame | 
 
 
 # Valida e Lê um Excel
+#(OBS: acabei criando porque eu não tinha visto a parte que dizia que só ia ler TXT, CSV e JSON)
 def carregar_excel(caminho_arquivo: Path) -> pd.DataFrame | None:
     """
     Lê um arquivo Excel (.xlsx) para um DataFrame do Pandas.
