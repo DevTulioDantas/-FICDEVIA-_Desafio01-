@@ -34,6 +34,12 @@ from .processamento import(
     percentual_registros_invalidos_incompletos,
 )
 
+from .relatorio import (
+    gerar_dicionario_indicadores,
+    exportar_resumo_json,
+    exportar_graficos,
+)
+
 
 __all__ = [
     # Funções de leitura
@@ -50,6 +56,12 @@ __all__ = [
     "tempo_medio_atendimento",
     "categoria_maior_numero_solicitacoes",
     "percentual_registros_invalidos_incompletos",
+
+    # Funções para exportar relatorios
+    "gerar_dicionario_indicadores",
+    "exportar_resumo_json",
+    "exportar_graficos",
+
 
     # Funções de validação individuais
     "email_valido",
