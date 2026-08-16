@@ -183,15 +183,6 @@ def nucleo_protocolo(protocolo: str) -> str | None:
     encontrado = padrao_protocolotxt.search(protocolo)
     return encontrado.group(1) if encontrado else None
 
-#Para testes
-#categorias_json = {
-# "Acesso ao AVA": ["ava", "acesso ava", "ambiente virtual", "acesso ao ambiente virtual"],
-#"Instalação de programas": ["instalacao", "instalação", "instalar programa", "software"],}
-#mapa = construir_mapa_categorias(categorias_json)
-#mapa["ambiente virtual"]  
-#mapa["software"]           
-#mapa["config python"]      
-#mapa.get("categoria inexistente")  
 
 def validar_registro(registro: dict, num_linha: int, mapa_categorias: dict) -> list[str]:
     """
