@@ -1,6 +1,9 @@
 import pandas as pd
 import numpy as np
 import logging
+from .validacao import padronizar_data, categoria_valida
+from .validacao import padronizar_data, categoria_valida, normalizar_status
+
 
 logger = logging.getLogger(__name__)
 
@@ -125,4 +128,23 @@ def remover_duplicados_por_protocolo(df: pd.DataFrame) -> pd.DataFrame:
 
     return df.drop_duplicates(subset="protocolo", keep="first").reset_index(drop=True)
 
+
+
+def padronizar_dataframe(df: pd.DataFrame, mapa_categorias: dict) -> pd.DataFrame:
+    """Aplica a padronização de data, categoria e status em todo o DataFrame,    
+
+    Args:
+        df (pd.DataFrame): DataFrame com registros válidos, sem duplicados.
+        mapa_categorias (dict): Mapa invertido de categorias.
+
+    Returns:
+        pd.DataFrame: Cópia do DataFrame com 'data', 'categoria' e 'status'
+            padronizados, e 'tempo_minutos' como numérico.
+    """
+    df = df.copy()  # ← primeira linha, protege o DataFrame original
+    df["data"] = df["data"].apply(padronizar_data)
+    df["categoria"] = df["categoria"].apply(lambda c: categoria_valida(c, mapa_categorias))
+    df["status"] = df["status"].apply(normalizar_status)
+    df["tempo_minutos"] = pd.to_numeric(df["tempo_minutos"], errors="coerce")
+    return df
     

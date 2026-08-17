@@ -32,6 +32,8 @@ from .processamento import(
     tempo_medio_atendimento,
     categoria_maior_numero_solicitacoes,
     percentual_registros_invalidos_incompletos,
+    remover_duplicados_por_protocolo,
+    padronizar_dataframe,    
 )
 
 from .relatorio import (
@@ -62,6 +64,7 @@ __all__ = [
     "gerar_dicionario_indicadores",
     "exportar_resumo_json",
     "exportar_graficos",
+    "exportar_csv_tratado",
 
 
     # Funções de validação individuais
@@ -76,6 +79,10 @@ __all__ = [
     "construir_mapa_categorias",
     "extrair_contatos_txt",
     "nucleo_protocolo",
+
+    # Funções de tratamento
+    "remover_duplicados_por_protocolo",
+    "padronizar_dataframe",
 
     # Orquestradora
     "validar_registro",

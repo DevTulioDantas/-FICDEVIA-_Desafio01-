@@ -34,15 +34,22 @@ from .processamento import (
 )
 
 #cria um dict para todos os indicadores pedido no Desafio
-def gerar_dicionario_indicadores(df: pd.DataFrame) -> dict:
-    """Consolida todos os indicadores processados do DataFrame em um dicionário."""
+def gerar_dicionario_indicadores(df: pd.DataFrame, percentual_invalidos: float) -> dict:
+    """Consolida todos os indicadores processados do DataFrame em um dicionário.
+
+    Args:
+        df (pd.DataFrame): DataFrame já validado, sem duplicados e padronizado.
+        percentual_invalidos (float): Percentual de registros rejeitados na
+            validação, calculado sobre o TOTAL ORIGINAL do CSV (não sobre
+            este df, que já contém só os registros válidos).
+    """
     return {
         "quantidade_total_atendimentos": quantidade_total_atendimento(df),
         "quantidade_por_categoria": quantidade_por_categoria(df),
         "quantidade_por_status": quantidade_por_status(df),
         "tempo_medio_atendimento": tempo_medio_atendimento(df),
         "categoria_mais_solicitada": categoria_maior_numero_solicitacoes(df),
-        "percentual_registros_invalidos": percentual_registros_invalidos_incompletos(df),
+        "percentual_registros_invalidos": percentual_invalidos,
     }
 
 #exporta o dict feito anteriomente para um resumo.json por padrão ou outra rota 
@@ -103,31 +110,58 @@ def exportar_graficos(df: pd.DataFrame) -> None:
     try:
         # Garante que a pasta 'output/graficos' exista
         GRAFICOS.mkdir(parents=True, exist_ok=True)
+        plt.rcParams["savefig.dpi"] = 150  # imagens mais nítidas
 
         # 1. Gráfico: Atendimentos por Categoria (Barras)
-        plt.figure(figsize=(10, 6)) # Cria uma "folha" nova
+        plt.figure(figsize=(10, 6))
         contagem_categoria = df["categoria"].value_counts()
-        
-        contagem_categoria.plot(kind="bar", color="cornflowerblue", edgecolor="black")
-        plt.title("Volume de Atendimentos por Categoria", fontsize=14)
+
+        # Cor fixa POR NOME de categoria, não por posição — assim a cor
+        # de cada categoria não muda de execução para execução, mesmo
+        # que a ordem de frequência entre elas mude com novos dados
+        mapa_cores_categoria = {
+            "Acesso ao AVA": "#08519c",
+            "Instalação de programas": "#3182bd",
+            "Execução de atividades": "#6baed6",
+            "Senha": "#9ecae1",
+            "Configuração do Python": "#c6dbef",
+        }
+        cores_categoria = [mapa_cores_categoria.get(c, "lightgray") for c in contagem_categoria.index]
+
+        eixo = contagem_categoria.plot(kind="bar", color=cores_categoria, edgecolor="black")
+
+        eixo.bar_label(eixo.containers[0], padding=3, fontsize=10)  # valor em cima da barra
+        plt.title("Volume de Atendimentos por Categoria", fontsize=14, fontweight="bold")
         plt.xlabel("Categoria")
         plt.ylabel("Quantidade")
-        plt.xticks(rotation=45, ha="right") # Inclina os textos para não sobrepor
-        plt.tight_layout() # Ajusta as margens
-        
-        plt.savefig(GRAFICOS / "1_atendimentos_por_categoria.png")
-        plt.close() 
+        plt.xticks(rotation=45, ha="right")
+        plt.grid(axis="y", linestyle="--", alpha=0.4)
+        plt.margins(y=0.1)  # espaço extra no topo para o rótulo não cortar
+        plt.tight_layout()
 
-        
+        plt.savefig(GRAFICOS / "1_atendimentos_por_categoria.png")
+        plt.close()
+
+
         # 2. Gráfico: Distribuição do Tempo de Atendimento (Histograma)
         plt.figure(figsize=(10, 6))
-        
-        df["tempo_minutos"].plot(kind="hist", bins=15, color="lightcoral", edgecolor="black")
-        plt.title("Distribuição dos Tempos de Atendimento", fontsize=14)
+
+        media_tempo = df["tempo_minutos"].mean()
+        mediana_tempo = df["tempo_minutos"].median()
+
+        df["tempo_minutos"].plot(kind="hist", bins=20, color="lightcoral", edgecolor="black", alpha=0.85)
+        plt.axvline(media_tempo, color="darkred", linestyle="--", linewidth=2,
+                    label=f"Média: {media_tempo:.1f} min")
+        plt.axvline(mediana_tempo, color="steelblue", linestyle=":", linewidth=2,
+                    label=f"Mediana: {mediana_tempo:.1f} min")
+
+        plt.title("Distribuição dos Tempos de Atendimento", fontsize=14, fontweight="bold")
         plt.xlabel("Tempo (minutos)")
         plt.ylabel("Frequência (Quantidade de Chamados)")
+        plt.grid(axis="y", linestyle="--", alpha=0.4)
+        plt.legend()
         plt.tight_layout()
-        
+
         plt.savefig(GRAFICOS / "2_distribuicao_tempo.png")
         plt.close()
 
@@ -135,36 +169,55 @@ def exportar_graficos(df: pd.DataFrame) -> None:
         # 3. Gráfico: Proporção de Status (Pizza)
         plt.figure(figsize=(8, 8))
         contagem_status = df["status"].value_counts()
-        
-        # Cores para cada status padrão
-        cores = ["mediumseagreen", "gold", "tomato"] 
+
+        # Cor fixa POR NOME de status, não por posição — assim a cor de
+        # "resolvido" nunca muda de um gráfico para o outro, mesmo que a
+        # ordem de frequência mude entre execuções
+        mapa_cores_status = {
+            "resolvido": "mediumseagreen",
+            "em andamento": "gold",
+            "aberto": "tomato",
+        }
+        cores_status = [mapa_cores_status.get(s, "lightgray") for s in contagem_status.index]
+
         contagem_status.plot(
-            kind="pie", 
-            autopct="%1.1f%%", # Mostra a porcentagem no gráfico
-            startangle=90, 
-            colors=cores[:len(contagem_status)]
+            kind="pie",
+            autopct="%1.1f%%",
+            startangle=90,
+            colors=cores_status,
+            textprops={"fontsize": 11},
+            wedgeprops={"edgecolor": "white", "linewidth": 1.5},
         )
-        plt.title("Proporção de Atendimentos por Status", fontsize=14)
+        plt.title("Proporção de Atendimentos por Status", fontsize=14, fontweight="bold")
         plt.ylabel("")
+        plt.legend(
+            contagem_status.index, title="Status", loc="center left",
+            bbox_to_anchor=(1.0, 0.5),
+        )
         plt.tight_layout()
-        
-        plt.savefig(GRAFICOS / "3_proporcao_status.png")
+
+        plt.savefig(GRAFICOS / "3_proporcao_status.png", bbox_inches="tight")
         plt.close()
 
         # 4. Gráfico: Evolução de Atendimentos por Dia (Linha)
         plt.figure(figsize=(12, 5))
-        
-        # Agrupa contando quantos chamados ocorreram em cada data
-        contagem_data = df.groupby("data").size()
-        
+
+        # As datas estão como texto DD/MM/AAAA — convertemos para
+        # datetime só para agrupar/ordenar corretamente (senão o
+        # Pandas ordena as strings alfabeticamente, não por data real)
+        datas_ordenaveis = pd.to_datetime(df["data"], format="%d/%m/%Y")
+        contagem_data = df.groupby(datas_ordenaveis).size()
+        contagem_data.index = contagem_data.index.strftime("%d/%m/%Y")
+
         contagem_data.plot(kind="line", marker="o", color="darkorange", linewidth=2)
-        plt.title("Evolução do Volume de Atendimentos por Dia", fontsize=14)
+        plt.fill_between(range(len(contagem_data)), contagem_data.values, alpha=0.15, color="darkorange")
+        plt.title("Evolução do Volume de Atendimentos por Dia", fontsize=14, fontweight="bold")
         plt.xlabel("Data")
         plt.ylabel("Quantidade de Chamados")
-        plt.grid(True, linestyle="--", alpha=0.7) # Adiciona linhas de grade no fundo
+        plt.grid(True, linestyle="--", alpha=0.4)
         plt.xticks(rotation=45, ha="right")
         plt.tight_layout()
-        
+
         plt.savefig(GRAFICOS / "4_evolucao_por_dia.png")
         plt.close()
 
