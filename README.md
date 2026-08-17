@@ -91,9 +91,8 @@ Os arquivos de saída são gerados em `output/`:
 - **Tolerância a falhas:** cada linha do CSV é validada individualmente;
   uma linha inválida é registrada no log e descartada, sem interromper o
   processamento das demais.
-- **Extração de telefone/protocolo do TXT:** não implementada nesta
-  entrega, por decisão de priorização de tempo da dupla.
-
+- **Extração de telefone/protocolo do TXT:** implementada e testada em
+  `validacao.py` (`extrair_contatos_txt`)
 ## Uso de ferramentas de IA
 
 - **Ferramentas utilizadas:** Claude (Anthropic), Gemini e ChatGPT.
