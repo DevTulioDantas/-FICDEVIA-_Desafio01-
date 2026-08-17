@@ -42,3 +42,25 @@
 2026-08-17 08:10:31,277 - [INFO] - Arquivo salvo com sucesso em: C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\output\resumo.json
 2026-08-17 08:10:31,280 - [INFO] - CSV tratado salvo com sucesso em: C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\output\atendimentos_processados.csv (139 linhas)
 2026-08-17 08:10:31,280 - [INFO] - Aplicação finalizada com sucesso.
+2026-08-17 09:26:40,577 - [INFO] - JSON 'config.json' carregado com sucesso!
+2026-08-17 09:26:40,587 - [INFO] - CSV 'C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\data\atendimentos.csv' carregado com sucesso! (150 linhas)
+2026-08-17 09:26:40,588 - [INFO] - JSON 'categorias.json' carregado com sucesso!
+2026-08-17 09:26:40,589 - [INFO] - TXT 'observacoes.txt' carregado com sucesso! (4 linhas)
+2026-08-17 09:26:40,594 - [WARNING] - Linha 11: 1 erro(s) — ['E-mail inválido: email-invalido']
+2026-08-17 09:26:40,594 - [WARNING] - Linha 21: 1 erro(s) — ['Data inválida: 31/02/2026']
+2026-08-17 09:26:40,595 - [WARNING] - Linha 31: 1 erro(s) — ['Tempo de atendimento inválido: -15']
+2026-08-17 09:26:40,595 - [WARNING] - Linha 41: 1 erro(s) — ['Categoria não reconhecida: categoria inexistente']
+2026-08-17 09:26:40,596 - [WARNING] - Linha 61: 1 erro(s) — ['E-mail inválido: nan']
+2026-08-17 09:26:40,597 - [WARNING] - Linha 71: 1 erro(s) — ['Tempo de atendimento inválido: muito']
+2026-08-17 09:26:40,598 - [WARNING] - Linha 91: 1 erro(s) — ['Data inválida: nan']
+2026-08-17 09:26:40,598 - [WARNING] - Linha 101: 1 erro(s) — ['Tempo de atendimento inválido: 2000']
+2026-08-17 09:26:40,599 - [WARNING] - Linha 111: 1 erro(s) — ['Categoria não reconhecida: nan']
+2026-08-17 09:26:40,599 - [WARNING] - Linha 121: 1 erro(s) — ['E-mail inválido: nome@dominio']
+2026-08-17 09:26:40,600 - [INFO] - Validação concluída: 140/150 registros válidos (6.67% rejeitados).
+2026-08-17 09:26:40,602 - [INFO] - Diretórios verificados
+2026-08-17 09:26:40,603 - [WARNING] - 1 registro(s) duplicado(s) removido(s): ['SUP-2026-0001']
+2026-08-17 09:26:40,609 - [INFO] - Registros finais após tratamento: 139
+2026-08-17 09:26:42,164 - [INFO] -  Todos os 4 gráficos foram gerados com sucesso na pasta 'output/graficos'.
+2026-08-17 09:26:42,165 - [INFO] - Arquivo salvo com sucesso em: C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\output\resumo.json
+2026-08-17 09:26:42,168 - [INFO] - CSV tratado salvo com sucesso em: C:\Users\tulio\OneDrive\Documentos\DEV Tulio Dantas\Python - automatic]\-FICDEVIA-_Desafio01-\output\atendimentos_processados.csv (139 linhas)
+2026-08-17 09:26:42,168 - [INFO] - Aplicação finalizada com sucesso.

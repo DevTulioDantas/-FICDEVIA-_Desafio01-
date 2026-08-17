@@ -1,6 +1,7 @@
 import json
 import os
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 import pandas as pd
 from pathlib import Path
 import logging
@@ -158,6 +159,7 @@ def exportar_graficos(df: pd.DataFrame) -> None:
         plt.title("Distribuição dos Tempos de Atendimento", fontsize=14, fontweight="bold")
         plt.xlabel("Tempo (minutos)")
         plt.ylabel("Frequência (Quantidade de Chamados)")
+        plt.gca().xaxis.set_major_locator(mticker.MultipleLocator(10))
         plt.grid(axis="y", linestyle="--", alpha=0.4)
         plt.legend()
         plt.tight_layout()

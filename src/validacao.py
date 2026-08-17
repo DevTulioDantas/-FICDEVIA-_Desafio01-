@@ -68,6 +68,7 @@ def padronizar_telefone(telefone_bruto: str) -> str:
 
     return bool(padrao_telefone.fullmatch(telefone_bruto.strip()))
 
+
 def construir_mapa_categorias(categorias_json: dict) -> dict:
     """Inverte o mapa de categorias, Transforma {categoria_padrao: [aliases]} em {alias: categoria_padrao}
     
@@ -84,7 +85,7 @@ def construir_mapa_categorias(categorias_json: dict) -> dict:
             mapa_invertido[alias.strip().lower()] = categoria_padrao        
         mapa_invertido[categoria_padrao.strip().lower()] = categoria_padrao
     return mapa_invertido
-
+#essa solução foi sugerida por ia e adotada para padronizar categorias
 
 def categoria_valida(categoria: str, mapa_categorias: dict) -> str | None:
     """Normaliza uma categoria usando o mapa já invertido
